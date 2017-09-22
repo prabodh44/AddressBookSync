@@ -1,0 +1,111 @@
+<div class="custom-details">
+  <ng-container *ngIf="showEdit">
+    <i class="material-icons custom-edit" [routerLink]="['/update',contact.id]">edit</i>
+  </ng-container>
+  <div class="row">
+    <div class="col-sm-12 card text-center custom-card">
+      <img class="card-img-top custom-img-cap" [src]="sanitize('data:image/png;base64,' + contact.image)" alt="Card image cap">
+      <div class="card-block">
+        <p style="font-weight: 500; font-size: 130%">{{contact.firstName}} {{contact.middleName}} {{contact.lastName}}</p>
+        <p class="card-text">
+          {{contact.address}}, {{contact.country}}<br/>
+          {{contact.projectGroup}}
+        </p>
+      </div>
+    </div>
+
+    <div class="col-sm-12 card custom-card">
+      <h5 translate>contactDetails</h5>
+      <div class="card-block custom-card-block">
+        <ng-container *ngIf="contact.officialEmail">
+          <div style="font-weight: 500" translate>
+            officialEmail
+          </div>
+          <div class="card-text" class="custom-position">
+            {{contact.officialEmail}}
+            <span class="custom-action-position">
+              <a [href]="sanitize('mailto:'+contact.officialEmail)"><i class="material-icons">email</i></a>
+            </span>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="contact.personalEmail">
+          <div style="font-weight: 500" translate>
+            personalEmail
+          </div>
+          <div class="card-text custom-position">
+            {{contact.personalEmail}}
+            <span class="custom-action-position">
+              <a [href]="sanitize('mailto:'+contact.personalEmail)"><i class="material-icons">email</i></a>
+            </span>
+          </div>
+        </ng-container>
+        <div style="font-weight: 500" translate>contactNumber</div>
+        <ng-container *ngIf="contact.mobilePhoneA">
+          <div class="card-text custom-position">
+            {{contact.mobilePhoneA}}
+            <span class="custom-action-position">
+              <a [href]="sanitize('sms:'+contact.mobilePhoneA)"><i class="material-icons" style="margin-right: 10px">sms</i></a>
+              <a [href]="sanitize('tel:'+contact.mobilePhoneA)"><i class="material-icons">phone_in_talk</i></a>
+            </span>
+          </div>
+        </ng-container>
+        <ng-container class="card-text custom-position" *ngIf="contact.mobilePhoneB">
+          <div class="card-text custom-position">
+            {{contact.mobilePhoneB}}
+            <span class="custom-action-position">
+              <a [href]="sanitize('sms:'+contact.mobilePhoneB)"><i class="material-icons" style="margin-right: 10px">sms</i></a>
+              <a [href]="sanitize('tel:'+contact.mobilePhoneB)"><i class="material-icons">phone_in_talk</i></a>
+            </span>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="contact.homePhoneA">
+          <div class="card-text custom-position">
+            {{contact.homePhoneA}}
+            <span class="custom-action-position">
+              <a [href]="sanitize('tel:'+contact.homePhoneA)"><i class="material-icons">phone_in_talk</i></a>
+            </span>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="contact.homePhoneB">
+          <div class="card-text custom-position">
+            {{contact.homePhoneB}}
+            <span class="custom-action-position">
+              <a [href]="sanitize('tel:'+contact.homePhoneB)"><i class="material-icons">phone_in_talk</i></a>
+            </span>
+          </div>
+        </ng-container>
+        <div style="font-weight: 500" translate>emergencyContact</div>
+        <ng-container *ngIf="contact.emergencyPhoneA">
+          <div class="card-text custom-position">
+            {{contact.emergencyPhoneA}}
+            <span class="custom-action-position">
+              <a [href]="sanitize('sms:'+contact.emergencyPhoneA)"><i class="material-icons" style="margin-right: 10px">sms</i></a>
+              <a [href]="sanitize('tel:'+contact.emergencyPhoneA)"><i class="material-icons">phone_in_talk</i></a>
+            </span>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="contact.emergencyPhoneB">
+          <div class="card-text custom-position">
+            {{contact.emergencyPhoneB}}
+            <span class="custom-action-position">
+              <a [href]="sanitize('sms:'+contact.emergencyPhoneB)"><i class="material-icons" style="margin-right: 10px">sms</i></a>
+              <a [href]="sanitize('tel:'+contact.emergencyPhoneB)"><i class="material-icons">phone_in_talk</i></a>
+            </span>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="col-sm-12 card custom-card">
+      <h5 translate>otherDetails</h5>
+      <div class="card-block custom-card-block">
+        <p class="card-text">
+          <span translate>bg</span>: {{contact.bloodGroup}}
+          <br/>
+          <span translate>dob</span>: {{contact.birthDay}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

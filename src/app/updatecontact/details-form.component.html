@@ -1,0 +1,92 @@
+<div class="custom-details">
+  <div class="row custom-form">
+    <div class="card custom-card">
+      <form class="col-sm-12 col-md-12 custom-form form-inline" #updateDetails="ngForm">
+        <label style="margin-bottom: 15px" translate>updateContact</label>
+        <div class="text-center">
+          <img class="card-img-top custom-img-cap" [src]="sanitize('data:image/png;base64,' + contact.image)"
+               alt="Card image cap">
+          <div>
+            <i class="material-icons" (click)="takePicture()">photo_camera</i>
+            <ng-container *ngIf="contact.image"><i class="material-icons" (click)="deletePicture()">delete</i></ng-container>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label" translate>name</label>
+          <div>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="{{'firstname' | translate}}"
+                   [(ngModel)]="contact.firstName" #firstName="ngModel" required>
+            <input type="text" class="form-control" id="middleName" name="middleName" placeholder="{{'middlename' | translate}}"
+                   [(ngModel)]="contact.middleName" #middleName="ngModel">
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="{{'lastname' | translate}}"
+                   [(ngModel)]="contact.lastName" #lastName="ngModel" required>
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <label class="control-label" translate>address</label>
+          <div>
+            <input type="text" class="form-control" id="address" name="address" placeholder="{{'city' | translate}}"
+                   [(ngModel)]="contact.address" #address="ngModel" required>
+            <input type="text" class="form-control" id="country" name="country" placeholder="{{'country' | translate}}"
+                   [(ngModel)]="contact.country" #country="ngModel" required>
+
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <label class="control-label" translate>projectGroup</label>
+          <div>
+            <input type="text" class="form-control" id="projectGroup" name="projectGroup" placeholder="{{'projectGroup' | translate}}"
+                   [(ngModel)]="contact.projectGroup" #projectGroup="ngModel" required>
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <label class="control-label" translate>email</label>
+          <div>
+            <input type="email" class="form-control" id="officialEmail" name="officialEmail" placeholder="{{'officialEmail' | translate}}"
+                   [(ngModel)]="contact.officialEmail" #officialEmail="ngModel" required>
+            <input type="email" class="form-control" id="personalEmail" name="personalEmail" placeholder="{{'personalEmail' | translate}}"
+                   [(ngModel)]="contact.personalEmail" #personalEmail="ngModel" required>
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <label class="control-label" translate>contactNumber</label>
+          <div>
+            <input type="number" class="form-control" id="mobilePhoneA" name="mobilePhoneA" placeholder="{{'mobileNumber' | translate}}"
+                   [(ngModel)]="contact.mobilePhoneA" #mobilePhoneA="ngModel" required>
+            <input type="number" class="form-control" id="mobilePhoneB" name="mobilePhoneB" placeholder="{{'mobileNumber' | translate}} ({{'ifOther' | translate}})"
+                   [(ngModel)]="contact.mobilePhoneB" #mobilePhoneB="ngModel">
+            <input type="number" class="form-control" id="homePhoneA" name="homePhoneA" placeholder="{{'landLine' | translate}}"
+                   [(ngModel)]="contact.homePhoneA" #homePhoneA="ngModel">
+            <input type="number" class="form-control" id="homePhoneB" name="homePhoneB" placeholder="{{'landLine' | translate}} ( {{'ifOther' | translate}})"
+                   [(ngModel)]="contact.homePhoneB" #homePhoneB="ngModel">
+            <input type="number" class="form-control" id="emergencyPhoneA" name="emergencyPhoneA" placeholder="{{'emergencyContact' | translate}}"
+                   [(ngModel)]="contact.emergencyPhoneA" #emergencyPhoneA="ngModel" required>
+            <input type="number" class="form-control" id="emergencyPhoneB" name="emergencyPhoneB" placeholder="{{'emergencyContact' | translate}} ( {{'ifOther' | translate}})"
+                   [(ngModel)]="contact.emergencyPhoneB" #emergencyPhoneB="ngModel">
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <label class="control-label" translate>bg</label>
+          <div>
+            <input type="text" class="form-control" id="bloodGroup" name="bloodGroup" placeholder="{{'bg' | translate}}"
+                   [(ngModel)]="contact.bloodGroup" #bloodGroup="ngModel" required>
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <label class="control-label" translate>dob</label>
+          <div>
+            <input type="date" class="form-control" id="birthDay" name="birthDay" placeholder="{{'dob' | translate}}"
+                   [(ngModel)]="contact.birthDay" #birthDay="ngModel" required>
+          </div>
+        </div>
+        <i class="material-icons custom-save" (click)="onSave()">done</i>
+      </form>
+    </div>
+  </div>
+</div>

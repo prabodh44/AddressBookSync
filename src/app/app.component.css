@@ -1,0 +1,45 @@
+.custom-nav{
+  background-color: #6a6e8e;
+  border-radius: 0px;
+  font-size: 120%;
+  color: #fffaf0;
+  position: relative;
+}
+
+.nav-link{
+  border-bottom: #eae8f3;
+}
+
+.custom-top-nav{
+  padding-bottom: 6px;
+}
+
+.custom-footer{
+  height: 15px;
+  background: #6a6e8e;
+  font-size: x-small;
+  text-align: center;
+  color: #fffaf0;
+}
+
+.custom-download{
+  position: absolute;
+  top: 20%;
+  right: 140px;
+  font-size: 165%;
+}
+
+.custom-sync{
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  font-size: 160%;
+}
+
+.custom-back{
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  font-size: 230%;
+}
+

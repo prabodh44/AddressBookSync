@@ -1,0 +1,12 @@
+{
+  "name": "cordova-plugin-addressbooksync",
+  "version": "1.0.0",
+  "description": "Cordova plugin for address book sync",
+  "cordova": {
+    "id": "cordova-plugin-addressbooksync",
+    "platforms": [
+	  "browser",
+	  "android"
+    ]
+  }
+}

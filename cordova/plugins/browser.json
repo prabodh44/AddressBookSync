@@ -1,0 +1,34 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-browsersync": {
+            "PACKAGE_NAME": "com.hello.hello"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.hello.hello"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.hello.hello"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.hello.hello"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.hello.hello"
+        },
+        "cordova-plugin-addressbooksync": {
+            "PACKAGE_NAME": "com.hello.hello"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.hello.hello"
+        }
+    }
+}

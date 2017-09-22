@@ -1,0 +1,59 @@
+.custom-form{
+  margin: 0;
+}
+
+label {
+  font-size: 130%;
+  font-weight: bold;
+  justify-content: flex-start;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 100%;
+}
+
+.row{
+  display: inline-flex;
+}
+
+input{
+  margin: 10px auto;
+}
+
+form > div {
+  width: 100%;
+}
+
+.custom-card{
+  background-color: #babcce;
+  padding: 10px 10px;
+  margin: 0px auto;
+}
+
+.custom-save{
+  position: fixed;
+  top: 9px;
+  right: 60px;
+  z-index: 1031;
+  color: #fffaf0;
+  font-size: 235%;
+  font-weight: 900;
+}
+
+.custom-capture{
+  background: #6a6e8e;
+  border: none;
+  color: #fffaf0;
+}
+
+.custom-img-cap{
+  align-self: center;
+  width: 60%;
+  height: 60%;
+  margin: 5px auto;
+}
+
+.material-icons{
+  font-size: 200%;
+  margin: 5px;
+}

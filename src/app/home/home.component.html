@@ -1,0 +1,64 @@
+<nav class="custom-nav custom-active-bg custom-icon fixed-top custom-component-margin">
+  <form class="form-inline my-2 my-lg-0" #serachForm="ngForm">
+    <div class="row">
+      <input class="custom-input form-control mr-sm-2 col-sm-12 col-md-3 pull-md-right" type="search"
+             id="searchTerm" name="searchTerm" (keyup)="search()" (keyup.enter)="search()" (keydown.enter)="search()"
+             [(ngModel)]="searchTerm" placeholder="{{'searchPlaceHolder' | translate}}">
+      <a><i class="material-icons custom-search" (click)="search()">search</i></a>
+    </div>
+  </form>
+  <div class="custom-tab">
+    <ul class="nav nav-tabs text-sm-center" role="tablist" id="navList">
+      <li class="nav-item">
+        <a class="nav-link active" (click)="setCountry('Nepal')" role="tab" data-toggle="tab">
+          <img src="./assets/images/Flag-Nepal-flat.ico">Nepal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="setCountry('India')" role="tab" data-toggle="tab" routerLinkActive="active">
+          <img src="./assets/images/India-Flag.ico">India
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="setCountry('Netherlands')" role="tab" data-toggle="tab" routerLinkActive="active">
+          <img src="./assets/images/Netherlands-Flag.ico">
+          Ned
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="custom-gap"></div>
+</nav>
+<img class="custom-loader" src="./assets/images/loader.gif" [hidden]="!showLoader">
+<div id="displayDiv" class="container-fluid default-bg custom-home" [hidden]="showLoader">
+  <div class="row" [hidden]="!showContacts">
+    <ng-container *ngFor="let contact of filteredContacts">
+      <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="card custom-card col-sm-12 col-xs-12" [routerLink]="['/details',contact.id]">
+          <div class="row">
+            <img class="custom-img" [src]="sanitize('data:image/png;base64,' + contact.image)" alt="Photo"/>
+            <p class="card-text custom-card-text">
+              {{contact.firstName}} {{contact.middleName}} {{contact.lastName}}
+              <br/>
+              {{contact.address}}, {{contact.country}}
+              <br/>
+              {{contact.officialEmail}}
+              <br/>
+              {{contact.mobilePhoneA}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="row custom-no-contacts" [hidden]="showContacts">
+    <div class="no-result">
+      <span class="no-result-face">
+        <span class="no-result-eyes"></span>
+        <span class="no-result-eyes"></span>
+        <span class="no-result-mouth"></span>
+      </span>
+      <p translate>noContacts</p>
+    </div>
+  </div>
+</div>

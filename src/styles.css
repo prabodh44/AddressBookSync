@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+.default-bg {
+  background-color: #eae8f3;
+}
+
+.custom-component-margin {
+  margin-top: 40px;
+}
+
+html{
+  max-height: 100%;
+  min-height: 100%;
+}
+
+body{
+  max-height: 70%;
+  min-height: 70%;
+}
+
+.custom-details {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: absolute;
+  margin-top: 60px;
+  height: 87%;
+  overflow-y: scroll;
+}
+
+.custom-gap{
+  height: 15px;
+  background: #eae8f3;
+  margin: -2px auto;
+}
+
+/*loader*/
+.loader {
+  margin: 80% auto 0 auto;
+  position: relative;
+  left: 40%;
+  height: 65px;
+}

@@ -1,0 +1,65 @@
+.custom-img-cap{
+  align-self: center;
+  padding-top: 20px;
+  height: 170px;
+  width: 150px;
+}
+
+.custom-card{
+  margin: 0 15px 5px 15px;
+  padding: 10px 5px;
+  background-color: #babcce;
+  width: 95%;
+  align-self: center;
+  font-size: 15px;
+}
+
+.custom-card-block{
+  padding: 5px;
+}
+
+.custom-button{
+  background-color: #6a6e8e;
+  border: #6a6e8e;
+  color: #fff;
+}
+
+.custom-position{
+  position: relative;
+  margin: 10px auto;
+}
+
+.custom-action-position{
+  position: absolute;
+  top:-1px;
+  right: 1px;
+}
+
+.custom-phone-position{
+  position: absolute;
+  top:-1px;
+  right: 18%;
+}
+
+.card-block > div {
+  margin: 10px auto;
+}
+
+.card-text{
+  font-size: medium;
+  font-weight: 100;
+}
+
+.material-icons{
+  font-size: 200%;
+  color: #6a6e8e;
+}
+
+.custom-edit{
+  position: fixed;
+  top: 9px;
+  right: 60px;
+  z-index: 1031;
+  color: #fffaf0;
+  font-size: 190%;
+}
